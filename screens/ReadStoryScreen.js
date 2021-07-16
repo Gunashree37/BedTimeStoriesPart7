@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View ,FlatList,ScrollView} from 'react-native';
+import { StyleSheet, Text, View ,ScrollView} from 'react-native';
 import {SearchBar,Header} from 'react-native-elements';
 import db from '../config'
 
@@ -81,13 +81,10 @@ export default class ReadStoryScreen extends React.Component {
           
           <FlatList
                 data={this.state.search === "" ?  this.state.allStories: this.state.dataSource}
-                renderItem={({ item }) => (
-                  <View style={styles.itemContainer}>
-                    <Text>  Title: {item.title}</Text>
-                    <Text>  Author : {item.author}</Text>
-                  </View>
-                )}
-                keyExtractor={(item, index) => index.toString()}
+               
+
+
+
                 /> 
           
           
